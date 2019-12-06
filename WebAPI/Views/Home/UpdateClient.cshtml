@@ -1,0 +1,79 @@
+﻿@model Client
+@{ Layout = "_Layout"; ViewBag.Title = "Update a Client";}
+
+<h2>        Update a Client    </h2>
+<form asp-action="UpdateClient" method="post">
+    <div class="form-group">
+        <div class="form-group">
+            <label asp-for="Id"></label>
+            <input class="form-control" asp-for="Id" readonly />
+        </div>
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <ul>
+            <li>
+                <label for="Address">Address</label>
+                <select id="address">
+                    @*<option value="0">All</option>*@
+                    @foreach (Address a in Model.Addresses)
+                    {
+                        <option title="@a.PublicPlace" value="@a.Id">@a.PublicPlace</option>
+                    }
+                </select>
+            </li>
+        </ul>
+    </div>
+    <div class="text-center panel-body">
+        <button type="submit" class="btn btn-sm btn-primary">Update</button>
+        <a asp-action="Index" class="btn btn-sm btn-secondary">Back</a>
+    </div>
+</form>
+
+
+
+@if (ViewBag.Result == "Success")
+{
+    <h2>Client</h2>
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.Name</td>
+                <td>@Model.Email</td>
+                <td>@Model.Phone</td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+<script src="~/js/jquery-3.4.1.min.js"></script>
+<script src="~/js/jquery.mask.js"></script>
+<script src="~/js/functions.js"></script>
+

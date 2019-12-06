@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Client>
+@{ Layout = "_Layout"; ViewBag.Title = "All Clients";}
+
+<h2>All Clients</h2>
+
+<table class="table table-sm table-striped table-bordered m-2">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Id</td>
+                <td>@c.Name</td>
+                <td>@c.Email</td>
+                <td>@c.Phone</td>
+                <td>
+                    <a asp-action="UpdateClient" asp-route-id="@c.Id">Editar</a>
+                </td>
+                <td>
+                    <form asp-action="DeleteClient" method="post">
+                        <input type="hidden" value="@c.Id" name="ClientId" />
+                        <input type="image" src="~/ico/delete.png" onclick="return confirm('Deseja realmente excluir este registro?');" />
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="AddClient" class="btn btn-sm btn-primary">Add Client</a>
+<a asp-action="GetClient" class="btn btn-sm btn-secondary">Get Client</a>

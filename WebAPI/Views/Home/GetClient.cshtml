@@ -1,0 +1,38 @@
+﻿@model Client
+@{ Layout = "_Layout"; ViewBag.Title = "Get Client by Id";}
+
+    <h2>        Get Client by Id</h2>
+        <form method="post">
+            <div class="form-group">
+                <label for="id">Id:</label>
+                <input class="form-control" name="id" />
+            </div>
+            <div class="text-center panel-body">
+                <button type="submit" class="btn btn-sm btn-primary">Get Client</button>
+                <a asp-action="Index" class="btn btn-sm btn-primary">Back</a>
+            </div>
+        </form>
+  
+
+@if (Model != null)
+{
+    <h2>Client</h2>
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.Name</td>
+                <td>@Model.Email</td>
+                <td>@Model.Phone</td>
+            </tr>
+        </tbody>
+    </table>
+}

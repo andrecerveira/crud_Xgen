@@ -1,0 +1,15 @@
+C:\dev\XGen\Project\Infra\bin\Debug\netcoreapp3.0\Infra.deps.json
+C:\dev\XGen\Project\Infra\bin\Debug\netcoreapp3.0\Infra.runtimeconfig.json
+C:\dev\XGen\Project\Infra\bin\Debug\netcoreapp3.0\Infra.runtimeconfig.dev.json
+C:\dev\XGen\Project\Infra\bin\Debug\netcoreapp3.0\Infra.dll
+C:\dev\XGen\Project\Infra\bin\Debug\netcoreapp3.0\Infra.pdb
+C:\dev\XGen\Project\Infra\bin\Debug\netcoreapp3.0\Domain.dll
+C:\dev\XGen\Project\Infra\bin\Debug\netcoreapp3.0\Domain.pdb
+C:\dev\XGen\Project\Infra\obj\Debug\netcoreapp3.0\Infra.csprojAssemblyReference.cache
+C:\dev\XGen\Project\Infra\obj\Debug\netcoreapp3.0\Infra.Migrations.Initial.resources
+C:\dev\XGen\Project\Infra\obj\Debug\netcoreapp3.0\Infra.csproj.GenerateResource.cache
+C:\dev\XGen\Project\Infra\obj\Debug\netcoreapp3.0\Infra.AssemblyInfoInputs.cache
+C:\dev\XGen\Project\Infra\obj\Debug\netcoreapp3.0\Infra.AssemblyInfo.cs
+C:\dev\XGen\Project\Infra\obj\Debug\netcoreapp3.0\Infra.csproj.CopyComplete
+C:\dev\XGen\Project\Infra\obj\Debug\netcoreapp3.0\Infra.dll
+C:\dev\XGen\Project\Infra\obj\Debug\netcoreapp3.0\Infra.pdb
